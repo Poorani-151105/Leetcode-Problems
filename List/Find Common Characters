@@ -1,19 +1,26 @@
 Leetcode: 1002
 
+import java.util.*;
 class Solution {
-    public int pivotIndex(int[] nums) {
-        int total = 0;
-        for (int num : nums) {
-            total += num;
-        }
-        int leftSum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            total -= nums[i]; // right sum
-            if (leftSum == total) {
-                return i;
+    public List<String> commonChars(String[] words) {
+        int[] minCount = new int[26];
+        Arrays.fill(minCount, Integer.MAX_VALUE);
+        for (String word : words) {
+            int[] count = new int[26];
+            for (char ch : word.toCharArray()) {
+                count[ch - 'a']++;
             }
-            leftSum += nums[i];
+            for (int i = 0; i < 26; i++) {
+                minCount[i] = Math.min(minCount[i], count[i]);
+            }
         }
-        return -1;
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < 26; i++) {
+            while (minCount[i] > 0) {
+                result.add(String.valueOf((char)(i + 'a')));
+                minCount[i]--;
+            }
+        }
+        return result;
     }
 }
