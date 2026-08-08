@@ -1,0 +1,29 @@
+Leetcode: 2225
+
+import java.util.*;
+
+class Solution {
+    public List<List<Integer>> findWinners(int[][] matches) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < matches.length; i++) {
+            int winner = matches[i][0];
+            int loser = matches[i][1];
+
+            map.putIfAbsent(winner, 0);
+            map.put(loser, map.getOrDefault(loser, 0) + 1);
+        }
+        List<Integer> zero = new ArrayList<>();
+        List<Integer> one = new ArrayList<>();
+        for (int player : map.keySet()) {
+            if (map.get(player) == 0) zero.add(player);
+            if (map.get(player) == 1) one.add(player);
+        }
+        Collections.sort(zero);
+        Collections.sort(one);
+        List<List<Integer>> result = new ArrayList<>();
+        result.add(zero);
+        result.add(one);
+        return result;
+    }
+}
