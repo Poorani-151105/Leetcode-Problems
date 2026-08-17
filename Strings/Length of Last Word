@@ -1,0 +1,20 @@
+Leetcode: 58
+
+class Solution {
+    public int lengthOfLastWord(String s1) {
+       int count = 0;
+      String s = s1.trim();
+       for(int i =s.length()-1; i>=0; i--){
+           if(s.charAt(i) != ' '){
+              count++;
+           }
+          /* else if(s.charAt(i) == ' '){
+             return count;
+           }*/
+           else{
+            break;
+           }
+       }
+       return count;
+    }
+}
