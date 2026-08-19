@@ -1,5 +1,5 @@
 Leetcode: 1491
-
+ 
 class Solution {
     public double average(int[] salary) {
         int min = salary[0];
