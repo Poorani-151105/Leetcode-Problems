@@ -1,6 +1,6 @@
 Leetcode: 1002
 
-import java.util.*;
+import java.util.*; 
 class Solution {
     public List<String> commonChars(String[] words) {
         int[] minCount = new int[26];
