@@ -1,6 +1,6 @@
 Leetcode: 349
 
-import java.util.*;
+import java.util.*; 
 class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
         List<Integer> list = new ArrayList<>();
