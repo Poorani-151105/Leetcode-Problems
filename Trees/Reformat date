@@ -4,7 +4,7 @@ class Solution {
     public String reformatDate(String date) {
         String[] parts = date.split(" ");
         String day = parts[0].replaceAll("[^0-9]", "");
-        if (day.length() == 1)
+        if (day.length() == 1) 
             day = "0" + day;
 
         String[] months = {"Jan","Feb","Mar","Apr","May","Jun",
