@@ -1,6 +1,6 @@
 Leetcode: 1796
 
-class Solution {
+class Solution { 
     public int secondHighest(String s) {
         int first = -1;
         int second = -1;
