@@ -1,4 +1,4 @@
-Leetcode: 520
+Leetcode: 520 
 
 class Solution {
     public boolean detectCapitalUse(String word) {
