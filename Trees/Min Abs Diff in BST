@@ -1,7 +1,7 @@
 Leetcode: 530
 
 class Solution {
-    int min = Integer.MAX_VALUE;
+    int min = Integer.MAX_VALUE; 
     Integer prev = null;
     public int getMinimumDifference(TreeNode root) {
         inorder(root);
