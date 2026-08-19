@@ -1,7 +1,7 @@
 Leetcode: 500
 
 class Solution {
-    public String[] findWords(String[] words) {
+    public String[] findWords(String[] words) { 
         String row1 = "qwertyuiop";
         String row2 = "asdfghjkl";
         String row3 = "zxcvbnm";
