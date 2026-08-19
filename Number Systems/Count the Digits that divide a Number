@@ -1,4 +1,4 @@
-Leetcode: 2520
+Leetcode: 2520 
 
 class Solution {
     public int countDigits(int num) {
